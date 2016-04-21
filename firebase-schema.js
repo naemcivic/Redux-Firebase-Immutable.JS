@@ -11,11 +11,11 @@
     name
     text
     timestamp
-    uid (of duck author)
+    uid
 
 /likeCount
   duckId
-    0
+
 
 /usersDucks
   uid
@@ -25,7 +25,7 @@
       name
       text
       timestamp
-      uid (of duck author)
+      uid
 
 /replies
   duckId
@@ -38,4 +38,4 @@
 
 /usersLikes
   uid
-    duckId: true
+    duckId
