@@ -1,1 +1,1 @@
-  **Learn Redux and Immutable.JS
+  **Learn Redux and Immutable.JS**
