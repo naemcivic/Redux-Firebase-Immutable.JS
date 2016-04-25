@@ -3,7 +3,7 @@
     isAuthed,
     isFetching,
     error,
-    autheId,
+    authedId,
     [uid]: {
       lastUpdated,
       info: {
