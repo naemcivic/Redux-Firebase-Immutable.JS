@@ -1,4 +1,4 @@
-//user
+// Users
 {
   type: AUTH_USER,
   uid,
@@ -132,6 +132,7 @@
 {
   type: REMOVE_REPLY,
   replyId,
+  duckId,
 }
 
 // likeCount
@@ -183,17 +184,17 @@
 }
 
 {
-  type: FETCHING_LIKE_ERROR,
+  type: FETCHING_LIKES_ERROR,
   error: 'Error fetching likes'
 }
 
 {
-  type: FETCHING_LIKE_SUCCESS,
+  type: FETCHING_LIKES_SUCCESS,
   likes,
 }
 
 {
-  type: ADD_A_LIKE,
+  type: ADD_LIKE,
   duckId,
 }
 

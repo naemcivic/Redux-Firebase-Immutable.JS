@@ -44,15 +44,15 @@
     [duckId]: 0
   },
   usersLikes: {
-    duckId: true
-  }
+    [duckId]: true
+  },
   feed: {
     isFetching,
     error,
     newDucksAvailable,
     duckIdsToAdd: [duckId, duckId],
     duckIds: [duckId, duckId]
-  }
+  },
   replies: {
     isFetching,
     error,
