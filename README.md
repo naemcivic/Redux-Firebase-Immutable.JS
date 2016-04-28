@@ -1,1 +1,1 @@
-  **Learn Redux and Immutable.JS**
+  **Learn React with Redux and Immutable.JS**
