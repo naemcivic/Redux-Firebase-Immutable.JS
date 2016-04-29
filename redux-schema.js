@@ -18,8 +18,6 @@
     isOpen
   },
   ducks: {
-    isFetching,
-    error,
     [duckId]: {
       lastUpdated,
       info: {
@@ -32,27 +30,27 @@
       }
     }
   },
+  likeCount: {
+    [duckId]: 0
+  },
   usersDucks: {
     isFetching,
     error,
     [uid]: {
       lastUpdated,
-      duckIds: [duckId duckId]
+      duckIds: [duckId, duckId, duckId]
     }
   },
-  likeCount: {
-    [duckId]: 0
-  },
   usersLikes: {
-    [duckId]: true
-  },
+    duckid: true,
+  }
   feed: {
     isFetching,
     error,
     newDucksAvailable,
     duckIdsToAdd: [duckId, duckId],
-    duckIds: [duckId, duckId]
-  },
+    duckIds: [duckid, duckId, duckId]
+  }
   replies: {
     isFetching,
     error,
@@ -70,6 +68,6 @@
     }
   },
   listeners: {
-    [listenersId]: true
-  },
+    [listenerId]: true
+  }
 }

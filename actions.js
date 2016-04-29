@@ -13,8 +13,8 @@
 }
 
 {
-  type:  FETCHING_USER_FAILURE,
-  error: 'error fetching user',
+  type: FETCHING_USER_FAILURE,
+  error: 'Error fetching user.',
 }
 
 {
@@ -32,7 +32,7 @@
 
 {
   type: FETCHING_DUCK_ERROR,
-  error: 'Error fetching duck',
+  error: 'Error fetching Duck',
 }
 
 {
@@ -55,7 +55,7 @@
 }
 
 
-//feed
+// Feed
 {
   type: SETTING_FEED_LISTENER,
 }
@@ -79,19 +79,20 @@
   type: RESET_NEW_DUCKS_AVAILABLE,
 }
 
-// listeners
+
+//Listeners
 {
   type: ADD_LISTENER,
   listenerId,
 }
 
-// Modal
 
+//Modal
 {
   type: OPEN_MODAL,
 }
 
-{
+  {
   type: CLOSE_MODAL,
 }
 
@@ -100,7 +101,24 @@
   newDuckText,
 }
 
-// replies
+
+//Replies
+{
+  type: ADD_REPLY,
+  duckId,
+  reply,
+}
+
+{
+  type: ADD_REPLY_ERROR,
+  error: 'Error adding reply',
+}
+
+{
+  type: REMOVE_REPLY,
+  replyId,
+}
+
 {
   type: FETCHING_REPLIES,
 }
@@ -114,29 +132,11 @@
   type: FETCHING_REPLIES_SUCCESS,
   replies,
   duckId,
-  lastUpdated: Date.new(),
+  lastUpdated: Date.now(),
 }
 
-
-{
-  type: ADD_REPLY,
-  duckID,
-  reply,
-}
-
-{
-  type: ADD_REPLY_ERROR,
-  error: 'Error adding reply',
-}
-
-{
-  type: REMOVE_REPLY,
-  replyId,
-  duckId,
-}
 
 // likeCount
-
 {
   type: FETCHING_COUNT,
 }
@@ -152,8 +152,8 @@
   count,
 }
 
-// Users Ducks
 
+//usersDucks
 {
   type: FETCHING_USERS_DUCKS,
   uid,
@@ -161,7 +161,7 @@
 
 {
   type: FETCHING_USERS_DUCKS_ERROR,
-  error: 'Error fetching Users ducks'
+  error: 'Error fetching Users Duck Ids',
 }
 
 {
@@ -174,25 +174,11 @@
 {
   type: ADD_SINGLE_USERS_DUCK,
   uid,
-  duckIds,
+  duckId,
 }
 
-// Users Likes
 
-{
-  type: FETCHING_LIKES,
-}
-
-{
-  type: FETCHING_LIKES_ERROR,
-  error: 'Error fetching likes'
-}
-
-{
-  type: FETCHING_LIKES_SUCCESS,
-  likes,
-}
-
+// usersLikes
 {
   type: ADD_LIKE,
   duckId,
@@ -201,4 +187,18 @@
 {
   type: REMOVE_LIKE,
   duckId,
+}
+
+{
+  type: FETCHING_LIKES,
+}
+
+{
+  type: FETCHING_LIKES_ERROR,
+  error: 'Error fetching likes',
+}
+
+{
+  type: FETCHING_LIKES_SUCCESS,
+  likes,
 }
