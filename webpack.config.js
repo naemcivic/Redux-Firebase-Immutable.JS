@@ -1,3 +1,4 @@
+const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const htmlwebpackPluginConfig = new htmlWebpackPlugin ({
   template: __dirname + '/app/index.html',
@@ -5,12 +6,17 @@ const htmlwebpackPluginConfig = new htmlWebpackPlugin ({
   inject: 'body'
 })
 
+const PATHS = {
+  app: path.join(__dirname, 'app'),
+  build: path.join(__dirname, 'dist'),
+}
+
 module.exports = {
   entry: [
-    './app/index.js',
+    PATHS.app,
   ],
   output: {
-    path: __dirname + '/dist',
+    path: PATHS.build,
     filename: 'index_bundle.js',
   },
   module: {
