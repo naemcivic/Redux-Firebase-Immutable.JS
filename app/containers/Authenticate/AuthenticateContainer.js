@@ -1,7 +1,7 @@
 import React from 'react'
 import { Authenticate } from 'components'
 
-const AutheticateContainer = React.createClass({
+const AuthenticateContainer = React.createClass({
   render () {
     return (
       <Authenticate />
@@ -9,4 +9,4 @@ const AutheticateContainer = React.createClass({
   },
 })
 
-export default AutheticateContainer
+export default AuthenticateContainer
