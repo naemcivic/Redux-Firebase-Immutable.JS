@@ -7,7 +7,7 @@ const routes = (
     <Router path='/' component={MainContainer}>
       <IndexRoute component={HomeContainer} />
     </Router>
-</Router>
+  </Router>
 )
 
 export default routes
