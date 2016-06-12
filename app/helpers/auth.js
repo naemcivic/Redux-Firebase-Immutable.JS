@@ -1,13 +1,7 @@
+import { ref } from 'config/constants'
+
 export default function auth () {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({
-        name: 'Philip Chan',
-        avatar: 'http://res.cloudinary.com/naemcivic/image/upload/v1458676853/hsvwujidaif1yo0owuvb.jpg',
-        uid: 'naemcivic',
-      })
-    }, 2000)
-  })
+  return ref.authWithOAuthPopup('facebook')
 }
 
 
@@ -17,5 +11,11 @@ export function checkIfAuthed (store) {
 }
 
 export function logout () {
-   console.log('Logged Out');
+  ref.unauth()
+}
+
+export function saveUser (user) {
+  return ref.child(`users/${user.id}`)
+  .set(user)
+  .then(() => user)
 }
