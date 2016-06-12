@@ -1,4 +1,6 @@
 import { ref } from 'config/constants'
+import { formatUserInfo } from 'helpers/utils'
+import { authUser, fetchingUserSuccess } from 'redux/modules/users'
 
 export default function auth () {
   return ref.authWithOAuthPopup('facebook')
@@ -6,8 +8,17 @@ export default function auth () {
 
 
 export function checkIfAuthed (store) {
-  // ignore Firebase
-  return store.getState().isAuthed
+  const authData = ref.getAuth()
+
+  if (authData === null) {
+    return false
+  } else if (  store.getState().isAuthed === false) {
+    const { uid, facebook } = authData
+    const userInfo = formatUserInfo(facebook.displayName, facebook.profileImageURL, uid)
+    store.dispatch(authUser(uid))
+    store.dispatch(fetchingUserSuccess(uid, userInfo, Date.now()))
+  }
+    return true
 }
 
 export function logout () {
