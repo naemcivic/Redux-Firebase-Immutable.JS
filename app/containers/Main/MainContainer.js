@@ -22,5 +22,5 @@ MainContainer.propTypes = {
 }
 
 export default connect(
-  (state) => ({isAuthed: state.isAuthed})
+  ({users}) => ({isAuthed: users.isAuthed})
 )(MainContainer)
